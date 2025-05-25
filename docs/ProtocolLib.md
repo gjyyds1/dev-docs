@@ -1,3 +1,8 @@
+---
+sidebar_label: 'ProtocolLib'
+sidebar_position: 3
+---
+
 # ProtocolLib API 用法与用途文档
 
 整理自 [ProtocolLib 5.4.0-SNAPSHOT Javadoc](https://ci.dmulloy2.net/job/ProtocolLib/javadoc/)  
