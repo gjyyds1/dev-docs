@@ -1,6 +1,6 @@
 # ProtocolLib API 用法与用途文档
 
-整理自 ProtocolLib 5.4.0-SNAPSHOT Javadoc (<https://ci.dmulloy2.net/job/ProtocolLib/javadoc/>)  
+整理自 [ProtocolLib 5.4.0-SNAPSHOT Javadoc](https://ci.dmulloy2.net/job/ProtocolLib/javadoc/)  
 文档创建时间: 2025年5月25日  
 语言: 中文  
 
@@ -232,10 +232,10 @@ depends: [ProtocolLib]
 ---
 
 ## 6. 资源链接
-- **Javadoc**: <https://ci.dmulloy2.net/job/ProtocolLib/javadoc/>  
-- **GitHub**: <https://github.com/dmulloy2/ProtocolLib>  
-- **问题追踪**: <https://github.com/dmulloy2/ProtocolLib/issues>  
-- **赞助支持**: <https://github.com/sponsors/dmulloy2>  
+- [**Javadoc**](https://ci.dmulloy2.net/job/ProtocolLib/javadoc/)
+- [**GitHub**](https://github.com/dmulloy2/ProtocolLib)
+- [**问题追踪**](https://github.com/dmulloy2/ProtocolLib/issues)
+- [**赞助支持**](https://github.com/sponsors/dmulloy2)
 
 ---
 
