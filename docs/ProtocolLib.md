@@ -215,7 +215,7 @@ FuzzyFieldContract contract = FuzzyFieldContract.newBuilder()
 - **调试**：使用 `/packetlog` 命令记录数据包日志。  
 - **依赖管理**：在 `plugin.yml` 中添加 ProtocolLib 作为依赖，并在 `pom.xml` 中配置仓库：  
 ```yaml
-depends: [ProtocolLib]
+depend: [ProtocolLib]
 ```
 ```xml
 <repositories>

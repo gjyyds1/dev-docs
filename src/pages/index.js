@@ -12,15 +12,13 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <h1 className="hero__title">欢迎来到gjyyds1的API文档站</h1>
+        <p className="hero__subtitle">这里有你需要的API文档</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/docs/ProtocolLib">
+            开始阅读ProtocolLib 📚
           </Link>
         </div>
       </div>
@@ -32,11 +30,11 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`首页`}
+      description="Minecraft插件API文档">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        
       </main>
     </Layout>
   );
