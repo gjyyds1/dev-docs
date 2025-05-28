@@ -218,20 +218,25 @@ FuzzyFieldContract contract = FuzzyFieldContract.newBuilder()
 depend: [ProtocolLib]
 ```
 ```xml
-<repositories>
-    <repository>
-        <id>dmulloy2-repo</id>
-        <url>https://repo.dmulloy2.net/repository/public/</url>
-    </repository>
-</repositories>
-<dependencies>
-    <dependency>
-        <groupId>com.comphenix.protocol</groupId>
-        <artifactId>ProtocolLib</artifactId>
-        <version>5.4.0</version>
-        <scope>provided</scope>
-    </dependency>
-</dependencies>
+<repository>
+    <id>dmulloy2-repo</id>
+    <url>https://repo.dmulloy2.net/repository/public/</url>
+</repository>
+<dependency>
+    <groupId>com.comphenix.protocol</groupId>
+    <artifactId>ProtocolLib</artifactId>
+    <version>5.1.0</version>
+    <scope>provided</scope>
+</dependency>
+```
+```groovy
+repositories {
+    maven { url "https://repo.dmulloy2.net/repository/public/" }
+}
+
+dependencies {
+    compileOnly 'com.comphenix.protocol:ProtocolLib:5.1.0'
+}
 ```
 
 ---
