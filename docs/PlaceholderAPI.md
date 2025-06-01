@@ -1,4 +1,9 @@
-# PlaceholderAPI API 用法与示例
+---
+sidebar_label: 'PlaceholderAPI'
+sidebar_position: 2
+---
+
+# PlaceholderAPI
 
 PlaceholderAPI 是一个功能强大的 Minecraft 服务器插件，允许开发者通过占位符（placeholders）在聊天、计分板、命令等场景中显示动态信息。本文档基于 [PlaceholderAPI Wiki](https://wiki.placeholderapi.com/) 整理，详细介绍了如何在插件中使用现有占位符、创建自定义占位符扩展，以及其他高级功能和常见用例。以下内容为开发者提供清晰的 API 使用指南和示例代码，适用于 Bukkit/Spigot 插件开发。
 
