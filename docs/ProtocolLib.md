@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # ProtocolLib API 用法与用途文档
 
-整理自 [ProtocolLib 5.4.0-SNAPSHOT Javadoc](https://ci.dmulloy2.net/job/ProtocolLib/javadoc/)  
+整理自 [ProtocolLib 5.1.0-SNAPSHOT Javadoc](https://ci.dmulloy2.net/job/ProtocolLib/javadoc/)  
 文档创建时间: 2025年5月25日  
 语言: 中文  
 

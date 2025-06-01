@@ -80,7 +80,6 @@ const config = {
 	    position: "left",
 	    label: "Menu",
 	  },
-	  {to: '/docs/ProtocolLib', label: 'ProtocolLib', position: 'left'},
           {
             href: 'https://github.com/gjyyds1/dev-docs',
             label: 'GitHub',
