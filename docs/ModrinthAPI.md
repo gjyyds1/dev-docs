@@ -19,13 +19,13 @@ Modrinth 是一个专注于 Minecraft 内容的平台，提供 mod、插件、�
 | 端点 | 方法 | 描述 | 备注 |
 |------|------|------|------|
 | `/search` | GET | 根据条件搜索项目 | 支持多种搜索参数，如项目类型、分类等 |
-| `/project/{id|slug}` | GET | 获取特定项目的详细信息 | ID 或 slug 可互换使用 |
+| `/project/{id or slug}` | GET | 获取特定项目的详细信息 | ID 或 slug 可互换使用 |
 | `/projects` | GET | 通过 ID 获取多个项目的详细信息 | 接受 ID 列表 |
 | `/projects_random` | GET | 获取随机项目列表 | 用于发现新项目 |
-| `/project/{id|slug}/check` | GET | 检查项目 slug 或 ID 是否可用 | 用于验证标识有效性 |
-| `/project/{id|slug}/dependencies` | GET | 获取项目的所有依赖项 | 返回依赖的项目和版本 |
-| `/project/{id|slug}/version` | GET | 列出项目的所有版本 | 返回版本列表 |
-| `/project/{id|slug}/members` | GET | 获取项目的团队成员 | 返回团队成员信息 |
+| `/project/{id or slug}/check` | GET | 检查项目 slug 或 ID 是否可用 | 用于验证标识有效性 |
+| `/project/{id or slug}/dependencies` | GET | 获取项目的所有依赖项 | 返回依赖的项目和版本 |
+| `/project/{id or slug}/version` | GET | 列出项目的所有版本 | 返回版本列表 |
+| `/project/{id or slug}/members` | GET | 获取项目的团队成员 | 返回团队成员信息 |
 
 ### 2. 版本相关端点
 这些端点用于获取与项目版本相关的信息，包括通过哈希检索版本的 POST 请求。
@@ -43,11 +43,11 @@ Modrinth 是一个专注于 Minecraft 内容的平台，提供 mod、插件、�
 
 | 端点 | 方法 | 描述 | 备注 |
 |------|------|------|------|
-| `/user/{id|username}` | GET | 获取用户的公开信息 | 返回用户名、简介等公开数据 |
+| `/user/{id or username}` | GET | 获取用户的公开信息 | 返回用户名、简介等公开数据 |
 | `/users` | GET | 通过 ID 获取多个用户的公开信息 | 接受用户 ID 列表 |
-| `/user/{id|username}/projects` | GET | 获取用户拥有的项目 | 返回用户创建的项目列表 |
+| `/user/{id or username}/projects` | GET | 获取用户拥有的项目 | 返回用户创建的项目列表 |
 
-**注意**：`GET /user/{id|username}/follows`（获取用户关注的项目）和 `GET /user/{id|username}/notifications`（获取用户通知）可能需要 token，因为它们涉及用户特定数据，建议测试确认。
+**注意**：`GET /user/{id or username}/follows`（获取用户关注的项目）和 `GET /user/{id or username}/notifications`（获取用户通知）可能需要 token，因为它们涉及用户特定数据，建议测试确认。
 
 ### 4. 标签相关端点
 这些端点用于获取 Modrinth 平台支持的各种标签和分类，均为公开数据。
@@ -79,7 +79,7 @@ Modrinth 是一个专注于 Minecraft 内容的平台，提供 mod、插件、�
 ### 7. 其他
 | 端点 | 方法 | 描述 | 备注 |
 |------|------|------|------|
-| `/updates/{id|slug}/forge_updates.json` | GET | 为 Forge mod 开发者获取项目的 Forge 更新 JSON | 用于 Forge 模组更新 |
+| `/updates/{id or slug}/forge_updates.json` | GET | 为 Forge mod 开发者获取项目的 Forge 更新 JSON | 用于 Forge 模组更新 |
 
 ## 使用说明
 - **User-Agent 要求**：所有请求必须包含唯一的 User-Agent 头，例如 `github_username/project_name/1.0.0` 或 `github_username/project_name/1.0.0 (contact@example.com)`。仅使用 HTTP 客户端库的 User-Agent（如 `okhttp/4.9.3`）可能导致请求被阻止。
@@ -95,7 +95,7 @@ Modrinth 是一个专注于 Minecraft 内容的平台，提供 mod、插件、�
 - **ID 格式**：项目、版本、用户等使用八位 base62 ID 或 slug。
 
 ## 注意事项
-- **潜在需要 token 的端点**：某些端点（如 `GET /user/{id|username}/follows` 和 `GET /user/{id|username}/notifications`）可能因涉及用户特定数据而需要 token，尽管文档未明确说明。建议在实际使用时测试确认。
+- **潜在需要 token 的端点**：某些端点（如 `GET /user/{id or username}/follows` 和 `GET /user/{id or username}/notifications`）可能因涉及用户特定数据而需要 token，尽管文档未明确说明。建议在实际使用时测试确认。
 - **API 版本**：当前为 v2，未来版本（如 v3）可能引入变化。GitHub token 认证将在 v3 中停止，建议使用个人访问 token。
 - **OpenAPI 规范**：Modrinth 提供 OpenAPI 3.0.0 规范，可在 [https://docs.modrinth.com/openapi.yaml](https://docs.modrinth.com/openapi.yaml) 获取，详细列出端点和认证要求。
 - **推荐工具**：测试 API 可使用 cURL、ReqBIN、Postman 或 Insomnia。
